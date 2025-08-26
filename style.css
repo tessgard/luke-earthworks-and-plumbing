@@ -1,25 +1,322 @@
 /* CSS for Luke Earthworks and Plumbing */
+
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  color: #333;
+  background-color: #fff6e0; /* Changed from white to #fff6e0 */
 }
-header {
-  background: #333;
-  color: #fff;
-  padding: 1rem 0;
+
+.href {
+  text-decoration: none;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: #2a4d69;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  color: #fff6e0;
   text-align: center;
+  padding: 5rem 1rem;
+  min-height: 400px;
 }
-section {
+.hero-content h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #2a4d69; /* Dark blue from logo */
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #2a4d69; /* Dark blue from logo */
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: #4b86b4; /* Light blue from logo */
+}
+
+.hero-content img {
+  max-width: 300px;
+  height: auto;
+}
+
+.cta {
+  background: #45a7a3; /* Bright blue from logo */
+  color: #fff6e0;
+  margin-top: 50px;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.cta:hover {
+  background: #4b86b4; /* Light blue hover effect */
+}
+
+/* About Section */
+.about {
   padding: 2rem;
+  text-align: left;
+  background: #f8cf78;
 }
+/* Ensure image and text are centered and close together */
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the start */
+  column-gap: 1rem; /* Reduce gap between image and text */
+}
+
+.about-content img {
+  max-width: 400px !important;
+  height: auto;
+  margin-left: 20%;
+  border-radius: 10%;
+}
+
+.about h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #2a4d69; /* Dark blue */
+}
+
+.about-text {
+  margin-right: 20%;
+  max-width: 400px;
+}
+
+/* Services Section */
+.services {
+  padding: 2rem;
+  background: #fff6e0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.services h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #2a4d69;
+}
+.service-category {
+  flex: 1 1 auto; /* Allow divs to shrink and grow */
+  min-width: 250px; /* Set a minimum width */
+  max-width: 400px; /* Set a maximum width */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: #f8cf78;
+  border: 2px solid #2a4d69;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.service-category h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #2a4d69; /* Dark blue */
+}
+/* Align text and dots in lists to the left */
+.service-category ul {
+  text-align: left;
+  padding-left: 1.5rem; /* Ensure proper indentation */
+}
+.service-category ul {
+  list-style: none;
+  padding: 0;
+}
+/* Removed images from service categories */
+.service-category li {
+  display: list-item;
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  align-items: center;
+  text-align: left; /* Align text with the dots */
+}
+
+.service-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  padding: 2rem;
+  text-align: center;
+  background: #fff6e0; /* Changed from #eaf2f8 to #fff6e0 */
+}
+.trust-factors {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+.card {
+  background: #f4f8fb; /* Slightly lighter background */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1rem;
+  width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.card h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2a4d69; /* Dark blue */
+}
+
+/* Contact Section */
+.contact {
+  padding: 2rem;
+  background: #fff6e0; /* Changed from #eaf2f8 to #fff6e0 */
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #2a4d69; /* Dark blue */
+}
+
+/* Footer */
 footer {
-  background: #333;
+  background: #2a4d69; /* Dark blue */
   color: #fff;
   text-align: center;
   padding: 1rem 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  font-size: small;
+}
+
+/* Add responsive styling for desktop */
+@media (min-width: 768px) {
+  .about,
+  .services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .about h2,
+  .services h2 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .about-content,
+  .services-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .about-content img,
+  .services-content img {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .about-content div,
+  .services-content div {
+    flex: 1;
+  }
+
+  .service-category {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .service-category div {
+    flex: 1;
+    text-align: center;
+  }
+
+  .service-categories {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .service-category {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-category {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .service-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .service-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text {
+    margin: 0;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .about-content img {
+    margin: 0;
+    max-width: 80%;
+  }
 }
