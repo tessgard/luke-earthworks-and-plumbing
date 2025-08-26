@@ -142,7 +142,7 @@ a:hover {
   font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: -10px;
   color: #2a4d69; /* Dark blue */
 }
 /* Align text and dots in lists to the left */
@@ -316,7 +316,8 @@ footer {
   }
 
   .about-content img {
-    margin: 0;
-    max-width: 80%;
+    max-width: 80% !important; /* Further reduce the image size on mobile view */
+    height: auto;
+    margin: 0 auto; /* Center the image */
   }
 }
